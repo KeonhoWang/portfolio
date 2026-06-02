@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keonho Portfolio - Software Developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav>
+      <div class="nav-logo">KH.</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div id="mobile-menu">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <section id="hero">
+      <div class="hero-greeting">👋 Welcome to my portfolio</div>
+      <h1 class="hero-name">Keonho<br /><span>Portfolio</span></h1>
+      <div class="hero-typewriter">
+        <span id="typewriter"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-desc">
+        A passionate software developer who loves building creative, useful, and
+        impressive applications — from AI-powered tools to real-time web apps
+        and Chrome extensions.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">🚀 View Projects</a>
+        <a href="#contact" class="btn btn-secondary">📬 Contact Me</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-label">PROJECTS BUILT</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">6+</div>
+          <div class="hero-stat-label">TECHNOLOGIES</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">1000+</div>
+          <div class="hero-stat-label">LINES OF CODE</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">PASSION</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="fade-in">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Who am I?</h2>
+      </div>
+      <div class="about-grid fade-in">
+        <div class="about-image-container">
+          <div class="about-image-box">
+            <img
+              src="profile.jpg"
+              alt="Keonho"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+              "
+              onerror="this.outerHTML = '👨‍💻'"
+            />
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            Hi! I'm Keonho, a software developer passionate about building
+            things that are both useful and impressive. I love turning ideas
+            into real, working applications.
+          </p>
+          <p>
+            From building real-time chat apps to computer vision tools and
+            Chrome extensions, I enjoy exploring different areas of software
+            development and learning new technologies along the way.
+          </p>
+          <p>
+            I believe the best way to learn is by building — so I spend my time
+            creating projects that solve real problems and push my skills to the
+            next level.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-dot"></div>
+              <span>Full-stack web development</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-dot"></div>
+              <span>Computer vision & AI integration</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-dot"></div>
+              <span>Real-time applications with WebSockets</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-dot"></div>
+              <span>Browser extension development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="fade-in">
+        <div class="section-tag">Skills</div>
+        <h2 class="section-title">What I work with</h2>
+        <p class="section-subtitle">
+          Technologies and tools I've used across my projects.
+        </p>
+      </div>
+      <div class="skills-grid fade-in">
+        <div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>React</span><span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>JavaScript</span><span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Node.js</span><span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Python</span><span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>CSS / Tailwind</span><span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Socket.io</span><span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="65"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Computer Vision</span><span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="60"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Chrome Extensions</span><span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="65"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-tags fade-in">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Socket.io</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">MediaPipe</span>
+        <span class="tech-tag">OpenCV</span>
+        <span class="tech-tag">Howler.js</span>
+        <span class="tech-tag">Express</span>
+        <span class="tech-tag">Chrome API</span>
+        <span class="tech-tag">HTML / CSS</span>
+        <span class="tech-tag">Git</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="fade-in">
+        <div class="section-tag">Projects</div>
+        <h2 class="section-title">What I've built</h2>
+        <p class="section-subtitle">
+          4 projects built from scratch using different technologies.
+        </p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <span class="project-emoji">🎧</span>
+          <div class="project-title">Ambient Mix</div>
+          <div class="project-desc">
+            A privacy-first ambient soundscape mixer. Mix nature sounds, save
+            your favourite combinations, and focus better — all in the browser
+            with no login needed.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Tailwind CSS</span>
+            <span class="project-tag">Howler.js</span>
+            <span class="project-tag">OpenWeatherMap API</span>
+          </div>
+          <ul class="project-features">
+            <li>6 ambient sounds with volume control</li>
+            <li>Weather-based auto sound suggestions</li>
+            <li>Save & load named mixes</li>
+            <li>Pomodoro timer + listening stats</li>
+            <li>Animated particle background</li>
+          </ul>
+          <a
+            href="https://github.com/KeonhoWang/ambient-app"
+            target="_blank"
+            class="project-link"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div class="project-card fade-in">
+          <span class="project-emoji">🖐️</span>
+          <div class="project-title">Hand Gesture Controller</div>
+          <div class="project-desc">
+            Control your Mac with hand gestures using your webcam. Adjust
+            volume, brightness, switch tabs, take screenshots, and move your
+            cursor — all hands-free.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">MediaPipe</span>
+            <span class="project-tag">OpenCV</span>
+            <span class="project-tag">PyAutoGUI</span>
+          </div>
+          <ul class="project-features">
+            <li>9 hand gestures mapped to system actions</li>
+            <li>Air mouse — move cursor with your finger</li>
+            <li>Hold-to-trigger prevents accidents</li>
+            <li>Real-time overlay UI with progress bar</li>
+            <li>Screenshot gesture saves to Desktop</li>
+          </ul>
+          <a
+            href="https://github.com/KeonhoWang/gesture-controller"
+            target="_blank"
+            class="project-link"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div class="project-card fade-in">
+          <span class="project-emoji">💬</span>
+          <div class="project-title">Real-Time Chat App</div>
+          <div class="project-desc">
+            A full-featured real-time chat application with multiple rooms,
+            private messaging, emoji reactions, and a beautiful dark UI.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Socket.io</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">Vanilla JS</span>
+          </div>
+          <ul class="project-features">
+            <li>5 chat rooms with message history</li>
+            <li>Private messaging (DM panel)</li>
+            <li>Emoji reactions on messages</li>
+            <li>Pin messages & search history</li>
+            <li>Typing indicators & read receipts</li>
+          </ul>
+          <a
+            href="https://github.com/KeonhoWang/chat-app"
+            target="_blank"
+            class="project-link"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div class="project-card fade-in">
+          <span class="project-emoji">🗂️</span>
+          <div class="project-title">Smart Tab Manager</div>
+          <div class="project-desc">
+            A Chrome Extension that brings order to your browser chaos. Group
+            tabs, track time, save sessions, and close duplicates with a
+            beautiful popup UI.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Chrome Extension API</span>
+            <span class="project-tag">Manifest V3</span>
+            <span class="project-tag">Vanilla JS</span>
+          </div>
+          <ul class="project-features">
+            <li>Auto-groups tabs by category</li>
+            <li>Tracks how long each tab is open</li>
+            <li>Save & restore tab sessions</li>
+            <li>Close duplicate tabs instantly</li>
+            <li>Bookmark tabs & dark/light mode</li>
+          </ul>
+          <a
+            href="https://github.com/KeonhoWang/tab-manager"
+            target="_blank"
+            class="project-link"
+            >View on GitHub →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div id="stats">
+      <div class="inner">
+        <div class="stats-grid">
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">PROJECTS BUILT</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">TECHNOLOGIES USED</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="1500">0</div>
+            <div class="stat-label">LINES OF CODE</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">FEATURES SHIPPED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contact">
+      <div class="fade-in">
+        <div class="section-tag">Contact</div>
+        <h2 class="section-title">Let's work together</h2>
+        <p class="section-subtitle">
+          Have a project in mind or just want to say hi? I'd love to hear from
+          you!
+        </p>
+      </div>
+      <div class="contact-grid fade-in">
+        <div class="contact-info">
+          <p>
+            I'm always open to new opportunities, collaborations, or just a
+            friendly chat about tech. Feel free to reach out through any of the
+            channels below!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:wangkeonho.de@gmail.com" class="contact-link">
+              <span class="contact-link-icon">📧</span>
+              <span>wangkeonho.de@gmail.com</span>
+            </a>
+            <a
+              href="https://github.com/KeonhoWang"
+              target="_blank"
+              class="contact-link"
+            >
+              <span class="contact-link-icon">🐙</span>
+              <span>github.com/KeonhoWang</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/keonho-wang-908a3b297/"
+              target="_blank"
+              class="contact-link"
+            >
+              <span class="contact-link-icon">💼</span>
+              <span>linkedin.com/in/keonho-wang</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="contact-form">
+            <div class="form-group">
+              <label>YOUR NAME</label>
+              <input type="text" id="form-name" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label>YOUR EMAIL</label>
+              <input
+                type="email"
+                id="form-email"
+                placeholder="john@email.com"
+              />
+            </div>
+            <div class="form-group">
+              <label>MESSAGE</label>
+              <textarea
+                id="form-message"
+                placeholder="Hi Keonho, I'd love to..."
+              ></textarea>
+            </div>
+            <button class="form-submit" id="form-submit">
+              Send Message 🚀
+            </button>
+            <div class="form-success" id="form-success">
+              ✅ Message sent! I'll get back to you soon.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with <span>❤️</span> by <span>Keonho</span> · 2026</p>
+    </footer>
+
+    <div class="cursor-spotlight" id="spotlight"></div>
+    <button id="scroll-top">↑</button>
+    <div id="theme-switcher">
+      <div
+        class="theme-dot active"
+        style="background: #e94560"
+        data-color="#e94560"
+        data-shadow="233,69,96"
+      ></div>
+      <div
+        class="theme-dot"
+        style="background: #3b82f6"
+        data-color="#3b82f6"
+        data-shadow="59,130,246"
+      ></div>
+      <div
+        class="theme-dot"
+        style="background: #8b5cf6"
+        data-color="#8b5cf6"
+        data-shadow="139,92,246"
+      ></div>
+      <div
+        class="theme-dot"
+        style="background: #10b981"
+        data-color="#10b981"
+        data-shadow="16,185,129"
+      ></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
