@@ -154,12 +154,26 @@ document.getElementById("form-submit").addEventListener("click", () => {
 });
 
 // ── Cursor Spotlight ──
+// ── Cursor Spotlight ──
 const spotlight = document.getElementById("spotlight");
+let mouseX = 0,
+  mouseY = 0;
+let spotX = 0,
+  spotY = 0;
 
 document.addEventListener("mousemove", (e) => {
-  spotlight.style.left = e.clientX + "px";
-  spotlight.style.top = e.clientY + "px";
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
+
+function animateSpotlight() {
+  spotX += (mouseX - spotX) * 0.12;
+  spotY += (mouseY - spotY) * 0.12;
+  spotlight.style.transform = `translate(calc(${spotX}px - 50%), calc(${spotY}px - 50%))`;
+  requestAnimationFrame(animateSpotlight);
+}
+
+animateSpotlight();
 
 // ── Scroll to Top ──
 const scrollTopBtn = document.getElementById("scroll-top");
@@ -179,6 +193,16 @@ scrollTopBtn.addEventListener("click", () => {
 // ── Theme Switcher ──
 const themeDots = document.querySelectorAll(".theme-dot");
 
+const logoImg = document.getElementById("logo-img");
+
+const themeFilters = {
+  "#e94560": "hue-rotate(0deg) saturate(2) brightness(1)",
+  "#3b82f6": "hue-rotate(200deg) saturate(2) brightness(1)",
+  "#8b5cf6": "hue-rotate(250deg) saturate(2) brightness(1)",
+  "#10b981": "hue-rotate(130deg) saturate(2) brightness(1)",
+  "#f59e0b": "hue-rotate(30deg) saturate(2) brightness(1)",
+};
+
 themeDots.forEach((dot) => {
   dot.addEventListener("click", () => {
     const color = dot.dataset.color;
@@ -191,6 +215,11 @@ themeDots.forEach((dot) => {
     dot.classList.add("active");
 
     spotlight.style.background = `radial-gradient(circle, rgba(${shadow},0.08) 0%, transparent 70%)`;
+
+    // Update logo colour to match theme
+    if (logoImg && themeFilters[color]) {
+      logoImg.style.filter = themeFilters[color];
+    }
   });
 });
 

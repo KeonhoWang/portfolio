@@ -62,10 +62,16 @@ nav {
 }
 
 .nav-logo {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--primary);
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+#logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: hue-rotate(0deg) saturate(1);
+  transition: filter 0.3s ease;
 }
 
 .nav-links {
@@ -680,10 +686,9 @@ footer span {
   );
   pointer-events: none;
   z-index: 0;
-  transform: translate(-50%, -50%);
-  transition:
-    left 0.1s ease,
-    top 0.1s ease;
+  top: 0;
+  left: 0;
+  will-change: transform;
 }
 
 /* Scroll to Top */
@@ -834,6 +839,21 @@ footer span {
     padding: 80px 24px;
   }
   #theme-switcher {
-    display: none;
+    display: flex;
+  }
+
+  /* Move theme switcher to bottom on mobile */
+  #theme-switcher {
+    top: auto;
+    bottom: 80px;
+    right: 0;
+    transform: none;
+    flex-direction: column;
+    padding: 8px 6px;
+  }
+
+  .theme-dot {
+    width: 16px;
+    height: 16px;
   }
 }
