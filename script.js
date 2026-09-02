@@ -236,3 +236,20 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
     mobileMenu.classList.remove("open");
   });
 });
+
+// ── Certificate Lightbox ──
+function openCert(src) {
+  document.getElementById("cert-lightbox-img").src = src;
+  document.getElementById("cert-lightbox").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCert() {
+  document.getElementById("cert-lightbox").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+// Close with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeCert();
+});
