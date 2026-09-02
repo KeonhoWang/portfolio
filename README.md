@@ -1,6 +1,6 @@
 # 💼 Personal Portfolio Website
 
-A modern and responsive developer portfolio built to showcase my projects, technical skills, and experience as a Software Engineering student. The website features smooth animations, interactive UI elements, multiple color themes, and a clean user experience to highlight my work and make it easy for recruiters and visitors to learn more about me.
+A modern and responsive developer portfolio built to showcase my projects, technical skills, certificates,  and experience as a Software Engineering student. The website features smooth animations, interactive UI elements, multiple color themes, and a clean user experience to highlight my work and make it easy for recruiters and visitors to learn more about me.
 
 ---
 
