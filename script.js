@@ -253,3 +253,57 @@ function closeCert() {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeCert();
 });
+
+// ── Language Toggle ──
+let currentLang = "en";
+
+function toggleLang() {
+  currentLang = currentLang === "en" ? "ko" : "en";
+  const btn = document.getElementById("lang-btn");
+  btn.textContent = currentLang === "en" ? "🇰🇷 KO" : "🇺🇸 EN";
+
+  // Update all translatable elements
+  document.querySelectorAll("[data-en]").forEach((el) => {
+    const text = el.dataset[currentLang];
+    if (text) el.textContent = text;
+  });
+
+  // Update html lang attribute
+  document.documentElement.lang = currentLang === "en" ? "en" : "ko";
+
+  // Update input placeholders
+  const placeholders = {
+    "form-name": { en: "John Doe", ko: "홍길동" },
+    "form-email": { en: "john@email.com", ko: "example@email.com" },
+    "form-message": {
+      en: "Hi Keonho, I'd love to...",
+      ko: "안녕하세요 건호님, 연락드립니다...",
+    },
+  };
+
+  Object.entries(placeholders).forEach(([id, texts]) => {
+    const el = document.getElementById(id);
+    if (el) el.placeholder = texts[currentLang];
+  });
+
+  // Update typewriter phrases
+  if (currentLang === "ko") {
+    phrases.length = 0;
+    phrases.push(
+      "소프트웨어 개발자",
+      "React 개발자",
+      "Python 개발자",
+      "풀스택 개발자",
+      "창의적인 문제 해결사",
+    );
+  } else {
+    phrases.length = 0;
+    phrases.push(
+      "Software Developer",
+      "React Developer",
+      "Python Developer",
+      "Full-Stack Developer",
+      "Creative Problem Solver",
+    );
+  }
+}

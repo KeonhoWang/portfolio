@@ -987,7 +987,23 @@ footer span {
 #cert-lightbox-close:hover {
   transform: scale(1.1);
 }
+/* ── Language Button ── */
+#lang-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 6px 14px;
+  color: var(--text2);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
 
+#lang-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
 @media (max-width: 768px) {
   .certificates-grid {
     grid-template-columns: 1fr;
